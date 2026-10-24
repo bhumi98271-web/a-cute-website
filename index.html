@@ -1,0 +1,666 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff0f6">
+
+    <title>A Little World for Us 💗</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="passwordScreen" class="password-screen">
+  <div class="password-card">
+    <div class="password-heart">💗</div>
+
+<h1>Hey, Babyyyyy! 🥹</h1>
+
+<p>
+  I've made something special just for you.
+  Enter our secret password to unlock your surprise. 💌
+</p>
+
+<input
+  type="password"
+  id="secretPassword"
+  placeholder="Enter our secret password"
+  autocomplete="off"
+>
+
+<button onclick="unlockSurprise()">Unlock My Surprise 💖</button>
+
+<p id="passwordError" class="password-error"></p>
+
+<div>Made with love, just for you 💋</div>
+
+  </div>
+</div>
+
+
+<div class="background-hearts" id="backgroundHearts"></div>
+
+<!-- 1. WELCOME SCREEN -->
+<section class="screen active" id="welcomeScreen">
+
+    <div class="card">
+
+        <div class="cartoon">🌸 🧸 💗 🧸 🌸</div>
+
+        <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+
+        <h1>Hey, my<br><span>darlingggggg!</span></h1>
+
+        <p class="subtitle">
+            I made a little world just for you.
+            A world filled with my thoughts, my feelings,
+            and a little bit of our story. 💕
+        </p>
+
+        <button class="primary-btn" id="startBtn">
+            Open your surprise 💌
+        </button>
+
+        <p class="tiny-note">Made with love, by your girl ♡</p>
+
+    </div>
+</section>
+
+
+<!-- 2. THE LOVE QUESTION -->
+<section class="screen" id="questionScreen">
+
+    <div class="card">
+
+        <div class="cartoon big-cartoon">🥹💗🧸</div>
+
+        <p class="eyebrow">ANSWER HONESTLY, SUBHUUUU</p>
+
+        <h1>Do you love me?</h1>
+
+        <p class="subtitle">
+            Think carefully, Shubhuuuu.
+            Your little girl is watching. 👀💕
+        </p>
+
+        <div class="button-group">
+
+            <button class="primary-btn" id="yesBtn">
+                YES, I DO! 💖
+            </button>
+
+            <button class="secondary-btn" id="noBtn">
+                No 🙈
+            </button>
+
+        </div>
+
+        <p class="reaction" id="reaction" aria-live="polite"></p>
+
+    </div>
+</section>
+
+
+<!-- 3. HUGGING ANIMATION -->
+<section class="screen" id="loveScreen">
+
+    <div class="card">
+
+        <p class="eyebrow">HEHE, I WAS HOPING YOU WOULD SAY YES</p>
+
+        <div class="animation-container">
+            <img
+                src="animations/hugging.gif"
+                alt="A cute cartoon couple hugging"
+                class="love-animation"
+            >
+        </div>
+
+        <h1>Come here,<br><span>give me a hug! 🫂</span></h1>
+
+        <p class="subtitle">
+            If I could, I would give you the biggest hug
+            right now. Until then, consider this your
+            virtual one. 💗
+        </p>
+
+        <button class="primary-btn" id="galleryBtn">
+            Enter our little world →
+        </button>
+
+    </div>
+</section>
+
+
+<!-- 4. INDIVIDUAL PHOTOS ONLY -->
+<section class="screen" id="galleryScreen">
+
+    <div class="wide-container">
+
+        <p class="eyebrow">TWO PEOPLE, ONE LITTLE LOVE STORY</p>
+
+        <h1>Our Little World 🌷</h1>
+
+        <p class="subtitle">
+            We may not have pictures together yet,
+            but I still have my favorite pictures of you
+            and my own little collection of me. 💕
+        </p>
+
+        <h2 class="section-heading">My babyyyy 🧸</h2>
+
+        <div class="photo-grid">
+
+            <figure class="photo-card">
+                <img src="images/his-photo-1.jpeg"
+                     alt="My handsome boy" loading="lazy">
+                <figcaption>
+                    How can someone be this handsome? 🥹
+                </figcaption>
+            </figure>
+
+            <figure class="photo-card">
+                <img src="images/his-photo-2.jpeg"
+                     alt="Another photo of my boyfriend" loading="lazy">
+                <figcaption>
+                    My favorite face to see on my screen. 💗
+                </figcaption>
+            </figure>
+
+            <figure class="photo-card">
+                <img src="images/his-photo-3.jpeg"
+                     alt="One more photo of my boyfriend" loading="lazy">
+                <figcaption>
+                    Yes, babyyyy, I'm talking about you. 😚
+                </figcaption>
+            </figure>
+
+        </div>
+
+        <h2 class="section-heading">And then, there's me 🌸</h2>
+
+        <div class="photo-grid">
+
+            <figure class="photo-card">
+                <img src="images/my-photo-1.jpeg"
+                     alt="A photo of me" loading="lazy">
+                <figcaption>
+                    Your girl, sending you a little smile. 💕
+                </figcaption>
+            </figure>
+
+            <figure class="photo-card">
+                <img src="images/my-photo-2.jpeg"
+                     alt="Another photo of me" loading="lazy">
+                <figcaption>
+                    Probably thinking about you again. 🙈
+                </figcaption>
+            </figure>
+
+            <figure class="photo-card">
+                <img src="images/my-photo-3.jpeg"
+                     alt="One more photo of me" loading="lazy">
+                <figcaption>
+                    A little piece of my world. 🌷
+                </figcaption>
+            </figure>
+
+        </div>
+
+        <div class="cute-note">
+            <span>💌</span>
+            <p>
+                One day, we'll have our own pictures together.
+                Until then, here's me smiling at your photos
+                and you hopefully smiling at mine. ♡
+            </p>
+        </div>
+
+        <button class="primary-btn" id="chatsBtn">
+            Next: our chats & calls 💬
+        </button>
+
+    </div>
+</section>
+
+
+<!-- 5. CHATS AND VIDEO CALLS -->
+<section class="screen" id="chatsScreen">
+
+    <div class="card">
+
+        <p class="eyebrow">OUR LITTLE DAILY ROUTINE</p>
+
+        <h1>Our chats & calls 💬</h1>
+
+        <div class="animation-container">
+            <img
+                src="animations/video-call.webp"
+                alt="A cute cartoon couple on a video call"
+                class="love-animation"
+                loading="lazy"
+            >
+        </div>
+
+        <div class="message-list">
+
+            <p>💌 Talking about absolutely everything.</p>
+
+            <p>😂 Laughing at the silliest things.</p>
+
+            <p>📞 Hearing your voice and forgetting the time.</p>
+
+            <p>🌙 Saying goodnight, even when we want to talk longer.</p>
+
+            <p>💗 Finding little ways to feel close across the distance.</p>
+
+        </div>
+
+        <p class="subtitle">
+            Maybe our story doesn't have many pictures yet.
+            But it already has conversations, laughter,
+            and moments that make me smile.
+        </p>
+
+        <button class="primary-btn" id="aboutBtn">
+            What I love about you →
+        </button>
+
+    </div>
+</section>
+
+
+<!-- 6. WHAT I LOVE ABOUT HIM -->
+<section class="screen" id="aboutScreen">
+
+    <div class="card">
+
+        <p class="eyebrow">A LITTLE CONFESSION</p>
+
+        <h1>What I love about you 💗</h1>
+
+        <div class="cartoon big-cartoon">🥰🌷💗</div>
+
+        <div class="qualities">
+
+            <div class="quality">
+                <span>🤍</span>
+                <div>
+                    <h3>Your understanding heart</h3>
+                    <p>You try to understand me, even when I'm overthinking.</p>
+                </div>
+            </div>
+
+            <div class="quality">
+                <span>🌷</span>
+                <div>
+                    <h3>Your kindness</h3>
+                    <p>I love your caring nature and the person you are.</p>
+                </div>
+            </div>
+
+            <div class="quality">
+                <span>🧸</span>
+                <div>
+                    <h3>Your handsome face</h3>
+                    <p>Sorry, but I have to say it: you are ridiculously handsome. 🙈</p>
+                </div>
+            </div>
+
+            <div class="quality">
+                <span>💬</span>
+                <div>
+                    <h3>The way we talk</h3>
+                    <p>I love our conversations and how we keep learning about each other.</p>
+                </div>
+            </div>
+
+            <div class="quality">
+                <span>💞</span>
+                <div>
+                    <h3>The way you make me feel loved</h3>
+                    <p>Even from far away, the little things you do can make my day.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="primary-btn" id="feelingsBtn">
+            One honest little thing →
+        </button>
+
+    </div>
+</section>
+
+
+<!-- 7. HONEST FEELINGS -->
+<section class="screen" id="feelingsScreen">
+
+    <div class="card">
+
+        <p class="eyebrow">BECAUSE LOVE IS REAL LIFE TOO</p>
+
+        <h1>Even on the little hard days 🥺</h1>
+
+        <div class="cartoon big-cartoon">🥺💗🫂</div>
+
+        <p class="story-text">
+            Sometimes, little things hurt my feelings.
+            Sometimes, we may misunderstand each other.
+            And sometimes, I might overthink things.
+        </p>
+
+        <p class="story-text">
+            I know neither of us is perfect, and I don't
+            expect us to be. I hope that when something
+            hurts, we can talk honestly, listen to each other,
+            and try to understand.
+        </p>
+
+        <p class="story-text">
+            I want us to be the kind of couple who can
+            disagree without forgetting that we care
+            about each other. 💗
+        </p>
+
+        <p class="highlight">
+            Not perfect love. Honest love.
+            Patient love. Love that keeps learning. ♡
+        </p>
+
+        <button class="primary-btn" id="distanceBtn">
+            Our long-distance story →
+        </button>
+
+    </div>
+</section>
+
+
+<!-- 8. LONG-DISTANCE LOVE -->
+<section class="screen" id="distanceScreen">
+
+    <div class="card">
+
+        <p class="eyebrow">TWO PLACES, ONE SKY</p>
+
+        <h1>Our long-distance love 🌙</h1>
+
+        <div class="distance-scene">
+
+            <div class="distance-person">
+                <span>👧🏻</span>
+                <p>Me, thinking of you</p>
+            </div>
+
+            <div class="distance-sky">
+                <span class="moon">🌙</span>
+                <span class="star star-one">✦</span>
+                <span class="star star-two">✧</span>
+                <span class="plane">✈️</span>
+                <span class="heart-path">♡ · · · ♡</span>
+            </div>
+
+            <div class="distance-person">
+                <span>👦🏻</span>
+                <p>You, somewhere far away</p>
+            </div>
+
+        </div>
+
+        <p class="story-text">
+            Different places. Different routines.
+            Sometimes, we probably wish the distance
+            wasn't there at all.
+        </p>
+
+        <p class="story-text">
+            But until we can meet and hold each other
+            for real, we have our messages, our calls,
+            and all the little ways we show up for each other.
+        </p>
+
+        <div class="animation-container">
+            <img
+                src="animations/walking.webp"
+                alt="A cartoon couple walking hand in hand"
+                class="love-animation"
+                loading="lazy"
+            >
+        </div>
+
+        <p class="highlight">
+            One day, I hope our goodnight calls
+            become goodnight hugs. 🫂
+        </p>
+
+        <button class="primary-btn" id="futureBtn">
+            Let's dream a little 💍
+        </button>
+
+    </div>
+</section>
+
+
+<!-- 9. FUTURE DREAMS -->
+<section class="screen" id="futureScreen">
+
+    <div class="card">
+
+        <p class="eyebrow">A DREAM I HOPE WE SHARE</p>
+
+        <h1>Our little future 🌷</h1>
+
+        <div class="animation-container">
+            <img
+                src="animations/holding-hands.gif"
+                alt="A cute cartoon couple holding hands"
+                class="love-animation"
+                loading="lazy"
+            >
+        </div>
+
+        <p class="subtitle">
+            We've only just begun, but there are so many
+            things I hope we get to experience together.
+        </p>
+
+        <div class="dream-list">
+
+            <p>♡ Meet each other more often.</p>
+            <p>♡ Go on our first proper date.</p>
+            <p>♡ Travel somewhere beautiful together.</p>
+            <p>♡ Celebrate birthdays side by side.</p>
+            <p>♡ Support each other's dreams and careers.</p>
+            <p>♡ Build a peaceful, loving home someday.</p>
+            <p>♡ If life takes us there, get married and grow old together. 💍</p>
+
+        </div>
+
+        <div class="animation-container">
+            <img
+                src="animations/kissing.webp"
+                alt="A cute cartoon couple sharing a kiss"
+                class="love-animation"
+                loading="lazy"
+            >
+        </div>
+
+        <p class="story-text">
+            I know the future isn't something we can promise
+            perfectly today. But I hope we keep growing
+            together with love, honesty, and respect.
+        </p>
+
+        <button class="primary-btn" id="letterBtn">
+            I wrote something for you 💌
+        </button>
+
+    </div>
+</section>
+
+
+<!-- 10. LOVE LETTER -->
+<section class="screen" id="letterScreen">
+
+    <div class="card letter-card">
+
+        <div class="cartoon">💌🌷💗</div>
+
+        <p class="eyebrow">FROM MY HEART TO YOURS</p>
+
+        <h1>To My Favourite Person, ❤️</h1>
+
+        <div class="letter-paper">
+
+            <p>Hey, my love, ❤️</p>
+
+            <p>
+                Can you believe it's already been one month
+                and four days since our little story began?
+                It might not sound like a long time, but
+                I'm happy that I've gotten to know you.
+            </p>
+
+            <p>
+                Sometimes I wonder how a simple Instagram message could become such a special part of my life. You texted me first, and we started talking as friends. Little did I know that the boy I was talking to would become someone so important to my heart. Then you proposed to me, I said yes, and somehow, you became my favourite person. ❤️
+            </p>
+
+            <p>
+                If someone asked me what makes you special to me, I wouldn't just talk about your looks, even though I think you're handsome. I'd tell them about the little things you do that make me fall for you again and again.
+            </p>
+
+            <p>
+                Like how you try to flirt with me when I'm angry just to make me smile. How you listen to all my silly stories and gossip without making me feel immature. How you once told me that you like me just the way I am. And how you sometimes start talking so much and sharing every little detail of your day with me. You probably don't realise how happy those little things make me. 🫶🏻
+            </p>
+
+            <p>
+                I love that I can be myself with you. I don't have to pretend to be someone else to deserve your love. You give me time, respect, care, and affection, and those things mean more to me than I can explain.
+            </p>
+
+            <p>
+                But, baby, there's something I want you to understand. Sometimes I get angry, sometimes I overthink, and sometimes I feel insecure. Even when I'm angry with you, I still want your attention. Sometimes, when my feelings are hurt, I don't need a long explanation or a logical argument. I just want you to come close to me, kiss me, hug me, and say, "I love you, baby." Maybe that little moment would mean more to me than a thousand words. 🥺❤️
+            </p>
+
+            <p>
+                Sometimes I'm scared of losing you. Sometimes I worry that I might not be enough. I know I have my insecurities, and I'm trying to understand them, too. I don't expect you to solve every fear I have, but I hope we can keep making each other feel loved, valued, and secure.
+            </p>
+
+            <p>
+                And if there's one day I will always remember, it's the day you came into my life. I don't know everything our future holds, but I know that meeting you has become a beautiful part of my story. 💗
+            </p>
+
+            <p>
+                Do you know what I imagine when I think about five years from now?
+
+I imagine us finally being close to each other. No more wishing we could reach through our phones just to hug. I imagine cooking for you, teasing you, fighting over silly things, making up afterward, cuddling together, stealing kisses, and telling each other about our days while sitting right next to each other.
+            </p>
+
+            <p>
+                I imagine the ordinary moments, too. You talking endlessly while I listen, me annoying you for attention, us laughing at the most ridiculous things, and both of us finding comfort in simply being together. Maybe our life won't be perfect, but I hope it will be ours. 🏡💕
+            </p>
+
+            <p>
+                I don't want us to be just two people who love each other when everything is easy. I want us to learn how to understand each other when things get difficult, communicate when we misunderstand each other, and choose kindness even when we're upset.
+            </p>
+
+            <p>
+                I hope that, someday, when we look back at the beginning of our story, we'll smile at how it all started with one Instagram message. And maybe, if life gives us that beautiful chance, I'll get to look at you one day and call you my husband. 💍❤️
+            </p>
+
+            <p>
+                Until then, I want to enjoy every little step of our journey. I want to learn more about you, make memories with you, laugh with you, and keep discovering new reasons to love you.
+            </p>
+
+            <p>And now, one last thing, my jaanuuuu. 🤭💋</p>
+
+            <p>
+                If I were beside you right now, I wouldn't be writing all these words. I'd probably be hugging you tightly, kissing your cheek, and asking you to stay with me a little longer.
+            </p>
+
+            <p>
+                Happy being my favourite person, my love
+            </p>
+
+
+            <p class="letter-signature">
+                <b>I love you—not because our story is perfect, but because you're the person with whom I hope to build something real, beautiful, and lasting. ❤️🧿<br><br></b>>
+                <b>Forever hoping for our little world,</b><br><br>
+                Your girl. 💗
+            </p>
+
+        </div>
+
+        <button class="primary-btn" id="giftBtn">
+            Your last little surprise 🎁
+        </button>
+
+    </div>
+</section>
+
+
+<!-- 11. FINAL GIFT -->
+<section class="screen" id="giftScreen">
+
+    <div class="card">
+
+        <p class="eyebrow">MADE ESPECIALLY FOR YOU</p>
+
+        <h1>A little gift, my love 🎁</h1>
+
+        <p class="subtitle">
+            Tap the gift
+        </p>
+
+        <button class="gift-box" id="giftBox"
+                aria-label="Open the gift">
+            🎁
+        </button>
+
+        <p id="giftHint">Tap to open your gift. 💗</p>
+
+        <div class="final-message" id="finalMessage">
+
+            <div class="animation-container">
+                <img
+                    src="animations/hugging.gif"
+                    alt="A cartoon couple hugging"
+                    class="love-animation"
+                    loading="lazy"
+                >
+            </div>
+
+            <h2 class="forever">Maybe one day, forever. 💍</h2>
+
+            <p class="final-signature">
+                I love you, januuuuuu. ❤️
+
+                Mwah! One kiss from your girl💋
+            </p>
+
+        </div>
+
+        <button class="text-btn" id="restartBtn">
+            Read our little story again ↻
+        </button>
+
+    </div>
+</section>
+
+
+<footer>
+    Made with love, a little distance, and lots of hope. ♡
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
